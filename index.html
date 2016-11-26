@@ -4,82 +4,103 @@
 		<title>Department of Computer Science & Applications</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="icon" type="image/png" href="images/logo.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body class="landing">
-		<div id="page-wrapper">
+	<?PHP
+		$_SESSION['dcsa_user_type']="none";
 
+	?>
+	</head>
+	<body class="landing special">
+		<div id="page-wrapper">
+			<div class="header-overlay">
 			<!-- Header -->
 				<header id="header" class="alt">
-					<h1><a href="index.html">Home</a></h1>
+					<a href="index.html"><img src="images/dcsa-logo.png" height="50" /></a>
 					<nav id="nav">
 						<ul>
-							
+							<li><a href="index.html">Home</a></li>
 							<li>
 								<a href="#" class="icon fa-angle-down">Department</a>
-								<ul>
-									<!--<li><a href="generic.html">Staff</a></li>-->
+								<ul>								
+									<li><a href="assets/docs/Courses.pdf" target="_blank">Courses</a></li>
 									<li>
-										<a href="#">Faculty</a>
+										
+										<a href="#" class="icon fa-angle-right">Syllabus</a>
+										<ul>
+											<li><a href="assets/docs/mca.pdf" target="_blank">MCA (2011 Onwards)</a></li>
+											<li><a href="assets/docs/mca-15.pdf" target="_blank">MCA (2015 Onwards)</a></li>
+											<li><a href="assets/docs/msc-it.pdf" target="_blank">M.Sc (IT)</a></li>
+											<li><a href="assets/docs/m.phil(cs).pdf" target="_blank">M.Phil</a></li>
+										</ul>
 									</li>
-									<li><a href="#">Academics</a></li>
-									<li><a href="#">Research</a></li>
-                                                                        <li><a href="#">Exam Calender</a></li>
-                                                                        <li><a href="#">Photo Gallery</a></li>
-									<li><a href="#">Contact</a></li>
-									
+									<li><a href="faculty.php">Faculty</a></li>	
+									<li><a href="assets/docs/library.pdf" target="_blank">Library</a></li>	
+									<li><a href="assets/docs/lab.pdf" target="_blank">Computer Lab</a></li>									
 								</ul>
 							</li>
+							<li><a href="gallery/gallery.php">Gallery</a></li>
+							<li><a href="#" class="icon fa-angle-down">E-Learning</a>
+								<ul>
+									<li><a href="#">E - Materials</a>
+										<ul>
+											<li><a href="note_mca.php">MCA</a></li>
+											<li><a href="note_msc.php">M.Sc(IT)</a></li>									
+										</ul>
+									</li>
+									</li>
+									<li><a href="model_papers.php">Model Questions</a></li>
+									<li><a href="net_preparation.php">UGC-NET Materials</a></li>									
+								</ul>
+							</li>
+							<li><a href="feedback.php">Feedback</a></li>
+							<li><a href="contact.php">Contact Us</a></li>
 							<li><a href="login.php" class="button">Sign In</a></li>
 						</ul>
 					</nav>
 				</header>
-
+			</div>
 			<!-- Banner -->
 				<section id="banner">
 				
-					<h2 style="text-shadow:4px 4px 8px green;">The Gandhigram Rural Institute - Department of Computer Science & Applications</h2>
-					<!--<ul class="actions">
-						<li><a href="#" class="button special">Sign Up</a></li>
-						<li><a href="#" class="button">Learn More</a></li>
-					</ul>-->
+                                    <h3 style="text-shadow:1px 4px 4px white;"> Department of Computer Science & Applications
+									</br> The Gandhigram Rural Institute - Deemed University</h3>
+					
 				</section>
 
 			<!-- Main -->
 			
 				<section id="main" class="container">
-
 					<section class="box special">
 						<header class="major">
-							<h2> About GRI-DU
-						
-						</h2>
-							<p>Gandhigram Rural Institute, founded in 1956, is situated near Dindigul in Tamil Nadu, India. 
-                                                            Dr.T.S.Soundaram and Dr.G.Ramachandran developed the institute. The Gandhigram Rural Institute (GRI) 
-                                                            was founded there in 1956 to carry on Mahatma Gandhi’s ‘Nai Talim’ system of education. 
-                                                            In 1976 it was declared as Deemed University, by University Grants Commission (UGC), New Delhi,
-                                                             Under Section 3 of UGC Act 1956. It is fully funded by UGC. In 2006 it was renamed
-                                                             Gandhigram Rural Institute as per the guidelines of UGC. Again, as per UGC guidelines, 
-                                                             the name of the institute has been changed to Gandhigram Rural Institute in 2009.</p>
+                                            <h2><b> About the Department</b></h2>   
+												<p align="justify">The Department of Computer Science and Applications, established in 1996, offers Post-Graduate Programmes in 
+                                                Computer Applications (MCA) and Information Technology (M.Sc.IT) that lead to highly rewarding careers. Besides, 
+                                                the Department also offers research degrees M.Phil. and Ph.D in Computer Science to strengthen the research dimension.
+                                                The Department has taken up several sponsored research projects by UGC, ICMR and DST. In addition, the Department is 
+                                                also a proud recipient of UGC Indo-US 21st Century Knowlwdge Initiative Award. The mission of the Department is to provide its 
+                                                students with the highest quality education and professional experiences, to achieve excellence in their career.</p>
 						</header>
-						<span class="image featured"><img src="images/group.jpg" alt="" /></span>
+						<span class="image featured"><img src="images/banner1.jpg" alt="" /></span>
+                                                
 					</section>
-			</section>
+                                    
+                </section>
 
 			
-				<footer id="footer">
+				<footer id="footer"> 
 					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>						
 					</ul>
 					<ul class="copyright">
 						<li>&copy; GRI-DCSA. All rights reserved.</li>
+						<li>
+							<script type="text/javascript" src="http://widget.supercounters.com/hit.js"></script>
+							<script type="text/javascript">sc_hit(1214356,147,5);	</script>
+							<br>
+							<noscript><a href="http://www.supercounters.com">Page visits counter</a></noscript>
+						</li>
 					</ul>
 				</footer>
 
