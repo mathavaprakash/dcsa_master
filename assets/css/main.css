@@ -1,6 +1,6 @@
 @import url("font-awesome.min.css");
+@import url("font-awesome.css");
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
-
 /*
 	Alpha by HTML5 UP
 	html5up.net | @n33co
@@ -9,20 +9,67 @@
 
 /* Reset */
 
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	html, body, div, span, applet, object, embed, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, date, datetime-local, datetime, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
 		border: 0;
+		
 		font-size: 100%;
+		/*font-style:bold;*/
 		font: inherit;
 		vertical-align: baseline;
+		/*color:black;*/
+	}
+        /*header-overlay*/
+
+	.header-overlay{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		background: rgba(0, 0, 0, 0.3) none repeat scroll 0% 0%;
+		z-index: 50;
+		width: 100%;
+		height: 3.25em;
+	}
+	
+	section.box{
+		height: 100%;
+	}
+	
+	/*Right Arrow*/
+	ul > li a.icon:not(.button)::before {
+		float: right;
+		margin-left: 0.5em;
 	}
 
+	/*Banner Empty*/
+	#banner-empty{
+		padding: 8.5em 0 8.5em 0;
+		text-align: center;
+	}
+	
+	/*view-profile-btn*/
+	.view-profile-btn{
+		margin-top: 2em;
+		text-align: center;
+	}
+	
+	/*mail-id*/
+	.mail-id{
+		padding-top: 1em;
+	}
+	/*specialization*/
+	.spl-fac{
+		
+	}
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
+		
+		
 	}
 
 	body {
+		
 		line-height: 1;
 	}
 
@@ -1792,15 +1839,25 @@
 /* Basic */
 
 	body {
+		
 		background: #f5f5f5;
+		/*background: #1ce1d5;
+		background: #dcfcfc;
+		background-attachment: fixed;
+		background-color: #666;
+		background-image: url("../../images/back.jpg");
+		background-position: 						center center;
+		background-repeat: repeat;
+		background-size: auto;*/	
 	}
 
-	body, input, select, textarea {
+	body, input, select, textarea, option,embed {
 		color: #777;
 		font-family: "Source Sans Pro", sans-serif;
 		font-size: 16pt;
 		font-weight: 300;
 		line-height: 1.65em;
+		/*font-style:normal;*/
 		letter-spacing: -0.015em;
 	}
 
@@ -1810,7 +1867,8 @@
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #e89980;
+		/*color:red */
+		color:#e89980;;
 		text-decoration: none;
 	}
 
@@ -1820,9 +1878,21 @@
 
 	strong, b {
 		color: #646464;
+		/*color:#646464;*/
 		font-weight: 400;
 	}
-
+	ans{
+		color:green;
+		font-weight: 400;
+	}
+	ans_blue{
+		color:blue;
+		font-weight: 400;
+	}
+	warning{
+		color:red;
+		font-weight: 400;
+	}
 	em, i {
 		font-style: italic;
 	}
@@ -1832,7 +1902,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #646464;
+		color:  #646464;
 		font-weight: 300;
 		line-height: 1em;
 		margin: 0 0 0.5em 0;
@@ -1949,6 +2019,12 @@
 		margin: 0 0 1.5em 0;
 		font-style: italic;
 	}
+	
+	header img {
+		color: #999;
+		position: relative;
+		
+	}
 
 	header h2 + p {
 		font-size: 1.25em;
@@ -1991,21 +2067,26 @@
 /* Form */
 
 	form {
-		margin: 0 0 2em 0;
+		margin: 0 0 2em ;
 	}
-
+	embed{
+		margin: 0 0 2em 5%;
+	}
 	label {
 		color: #646464;
 		display: block;
-		font-size: 0.9em;
+		font-size: 1.3em;
 		font-weight: 300;
 		margin: 0 0 1em 0;
 	}
 
-	input[type="text"],
+	input[type="text"], input[type="number"],
 	input[type="password"],
 	input[type="email"],
-	select,
+	input[type="date"],
+	input[type="time"],input[type="file"],
+	input[type="datetime"],input[type="datetime-local"],
+	select,option,
 	textarea {
 		-moz-appearance: none;
 		-webkit-appearance: none;
@@ -2023,17 +2104,20 @@
 	}
 
 		input[type="text"]:invalid,
-		input[type="password"]:invalid,
-		input[type="email"]:invalid,
-		select:invalid,
+		input[type="number"]:invalid,
+		input[type="password"]:invalid,input[type="file"]:invalid,
+		input[type="email"]:invalid,input[type="date"]:invalid,
+		input[type="time"]:invalid,input[type="datetime"]:invalid,input[type="datetime-local"]:invalid,
+		select:invalid,option:invalid,
 		textarea:invalid {
 			box-shadow: none;
 		}
 
 		input[type="text"]:focus,
-		input[type="password"]:focus,
-		input[type="email"]:focus,
-		select:focus,
+		input[type="number"]:focus,
+		input[type="password"]:focus,input[type="file"]:focus,
+		input[type="email"]:focus,input[type="date"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,
+		select:focus,option:focus,
 		textarea:focus {
 			border-color: #e89980;
 			box-shadow: 0 0 0 2px #e89980;
@@ -2074,8 +2158,8 @@
 
 	input[type="text"],
 	input[type="password"],
-	input[type="email"],
-	select {
+	input[type="email"],input[type="file"],input[type="date"],input[type="datetime"],input[type="datetime-local"],
+	select,option {
 		height: 3em;
 	}
 
@@ -2085,6 +2169,7 @@
 
 	input[type="checkbox"],
 	input[type="radio"] {
+		
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
@@ -2095,12 +2180,11 @@
 		opacity: 0;
 		width: 1em;
 		z-index: -1;
-	}
-
+		}
 		input[type="checkbox"] + label,
 		input[type="radio"] + label {
 			text-decoration: none;
-			color: #777;
+			color: black;
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
@@ -2191,6 +2275,8 @@
 		box-shadow: 0 2px 0 0 #e5e5e5;
 		margin: 0 0 2em 0;
 		padding: 3em;
+                
+                height:25em;
 	}
 
 		.box > :last-child {
@@ -2201,7 +2287,7 @@
 			background: none !important;
 			border-radius: 0 !important;
 			box-shadow: none !important;
-			margin: 0 0 2em 0;
+			/*margin: 0 0 2em 0;*/
 			padding: 0 !important;
 		}
 
@@ -2263,6 +2349,8 @@
 
 		.box.special {
 			text-align: center;
+			
+			
 		}
 
 		.box .image.featured {
@@ -2534,6 +2622,7 @@
 	.table-wrapper {
 		-webkit-overflow-scrolling: touch;
 		overflow-x: auto;
+		
 	}
 
 	table {
@@ -2542,7 +2631,7 @@
 	}
 
 		table tbody tr {
-			border: solid 1px #e5e5e5;
+			border: solid 5px #e5e5e5;
 			border-left: 0;
 			border-right: 0;
 		}
@@ -2552,7 +2641,7 @@
 			}
 
 		table td {
-			padding: 0.75em 0.75em;
+			padding: 0.75em   0.75em;
 		}
 
 		table th {
@@ -2573,8 +2662,18 @@
 
 		table.alt {
 			border-collapse: separate;
+			
 		}
-
+		table.eqlayout tbody tr td{
+			border: solid 1px #e5e5e5;
+				border-left-width: 0;
+				border-top-width: 0;
+				table-layout:fixed;
+		}
+		.f1{
+			width:50%;
+			
+		}
 			table.alt tbody tr td {
 				border: solid 1px #e5e5e5;
 				border-left-width: 0;
@@ -3047,15 +3146,20 @@
 			color: #fff;
 		}
 
-		#banner h2 {
-			font-size: 3.5em;
-			line-height: 1em;
-			margin: 0 0 0.5em 0;
-			padding: 0;
-		}
+		
 
+		#banner h3 {
+			font-size: 2.4em;
+			line-height: 1.5em;
+			/*font-style:bolder;*/
+			color: blue;
+			
+			margin: 0 0 0.5em 0;
+			padding: 8em 0 0 0;
+		}
 		#banner p {
 			font-size: 1.25em;
+			
 			margin-bottom: 1.75em;
 		}
 
@@ -3123,8 +3227,8 @@
 /* Footer */
 
 	#footer {
-		background: #f0f0f0;
-		padding: 4em 0 6em 0;
+		background:#f0f0f0;
+		padding: 4em 0 3em 0;
 		text-align: center;
 	}
 
@@ -3134,14 +3238,16 @@
 			-ms-transition: opacity 0.2s ease-in-out;
 			transition: opacity 0.2s ease-in-out;
 			opacity: 0.35;
+			/*color: white;*/
 		}
 
 			#footer .icons a:hover {
-				opacity: 0.75;
+				opacity: 1.75;
 			}
 
 		#footer .copyright {
 			color: #999;
+			/*color: white;*/
 			font-size: 0.9em;
 			line-height: 1em;
 			margin: 2em 0 0 0;
@@ -3166,17 +3272,24 @@
 					margin-left: 0;
 					padding-left: 0;
 				}
-
 /* CTA */
 
+
 	#cta {
+		/*background: #129990;
+		
+		background: #baa9fa ;
+		color: #ffffff;
 		background: #e89980;
+		color: #f9e5df;
+		padding: 3.5em 0 4em 0;*/
+        background: #777;
 		color: #f9e5df;
 		padding: 3.5em 0 4em 0;
 		text-align: center;
 	}
-
-		#cta h2, #cta h3, #cta h4, #cta h5, #cta h6 {
+	
+		#cta a, #cta h2, #cta h3, #cta h4, #cta h5, #cta h6 {
 			color: inherit;
 		}
 
@@ -3184,32 +3297,55 @@
 			margin: 0 auto;
 			max-width: 100%;
 			width: 25em;
+			
 		}
-
+		
 		#cta input[type="submit"],
 		#cta input[type="reset"],
 		#cta input[type="button"],
 		#cta .button {
 			box-shadow: none;
 			background: #fff;
-			color: #e89980;
+			color: black;
 		}
 
 		#cta input[type="text"],
+		#cta input[type="number"],
 		#cta input[type="password"],
 		#cta input[type="email"],
-		#cta select,
+		#cta input[type="date"],
+		#cta input[type="time"],
+		#cta input[type="datetime"],
+		#cta input[type="datetime-local"],
+		#cta input[type="file"],
 		#cta textarea {
+			
 			color: #ffffff;
+			/*background: rgba(255, 255, 255, 0.15);*/
 			background: rgba(255, 255, 255, 0.15);
+			border: 0;
+		}
+		#cta select,
+		#cta option{
+			background: #fff;
+			color: black;
 			border: 0;
 		}
 
 			#cta input[type="text"]:focus,
+			#cta input[type="number"]:focus,
 			#cta input[type="password"]:focus,
 			#cta input[type="email"]:focus,
-			#cta select:focus,
+			#cta input[type="date"]:focus,
+			#cta input[type="time"]:focus,
+			#cta input[type="datetime"]:focus,
+			#cta input[type="datetime-local"]:focus,
+			#cta input[type="file"]:focus,
 			#cta textarea:focus {
+				box-shadow: inset 0 0 0 2px #fff;
+			}
+			#cta select:focus,
+			#cta option:focus{
 				box-shadow: inset 0 0 0 2px #fff;
 			}
 
@@ -3233,6 +3369,17 @@
 			color: rgba(255, 255, 255, 0.75) !important;
 		}
 
+	#cta1{
+            /*background: #129990;*/
+		background: #777;
+		color: #f9e5df;
+		padding: 0.5em 0 0.5em 0;
+		text-align: center;
+	}	
+	#cta1 a, #cta1 h2, #cta1 h3, #cta1 h4, #cta1 h5, #cta1 h6 {
+			color: inherit;
+		}	
+		
 /* Wide */
 
 	@media screen and (max-width: 1680px) {
@@ -3320,7 +3467,7 @@
 			}
 
 			header.major {
-				padding: 0 4em;
+				padding: 0 1em;
 			}
 
 		/* Box */

@@ -21,6 +21,7 @@
 			$body = $('body'),
 			$header = $('#header'),
 			$banner = $('#banner');
+			$banner_empty = $('#banner-empty');
 
 		// Fix: Placeholder polyfill.
 			$('form').placeholder();
@@ -35,7 +36,7 @@
 
 		// Dropdowns.
 			$('#nav > ul').dropotron({
-				alignment: 'right'
+				alignment: 'left'
 			});
 
 		// Off-Canvas Navigation.
@@ -77,15 +78,29 @@
 		// If the header is using "alt" styling and #banner is present, use scrollwatch
 		// to revert it back to normal styling once the user scrolls past the banner.
 		// Note: This is disabled on mobile devices.
-			if (!skel.vars.mobile
-			&&	$header.hasClass('alt')
-			&&	$banner.length > 0) {
+			if (!skel.vars.mobile  &&	$header.hasClass('alt') &&	$banner.length > 0) {
 
 				$window.on('load', function() {
 
 					$banner.scrollwatch({
 						delay:		0,
 						range:		0.5,
+						anchor:		'top',
+						on:			function() { $header.addClass('alt reveal'); },
+						off:		function() { $header.removeClass('alt'); }
+					});
+
+				});
+
+			}
+			
+			if (!skel.vars.mobile  &&	$header.hasClass('alt') &&	$banner_empty.length > 0) {
+
+				$window.on('load', function() {
+
+					$banner_empty.scrollwatch({
+						delay:		0,
+						range:		0.2,
 						anchor:		'top',
 						on:			function() { $header.addClass('alt reveal'); },
 						off:		function() { $header.removeClass('alt'); }
